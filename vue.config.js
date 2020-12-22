@@ -1,0 +1,30 @@
+module.exports={
+    devServer:{
+        proxy:{
+            '^/move':{
+                target:'http://47.112.123.94:5000/',
+                ws:true,
+                changeOrigin:true,
+                pathRewrite:{
+                    '^/move/':'/move/'
+                },
+            },
+            '^/suggest':{
+                target:'http://47.112.123.94:5000/',
+                ws:true,
+                changeOrigin:true,
+                pathRewrite:{
+                    '^/suggest/':'/suggest/'
+                },
+            },
+            '^/memorize':{
+                target:'http://47.112.123.94:5000/',
+                ws:true,
+                changeOrigin:true,
+                pathRewrite:{
+                    '^/memorize/':'/memorize/'
+                },
+            },
+        },
+    },
+}
